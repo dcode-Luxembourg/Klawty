@@ -1,7 +1,4 @@
-import type {
-  ModelDefinitionConfig,
-  ModelProviderConfig,
-} from "klawty/plugin-sdk/provider-models";
+import type { ModelDefinitionConfig, ModelProviderConfig } from "klawty/plugin-sdk/provider-models";
 
 export const MODELSTUDIO_BASE_URL = "https://coding-intl.dashscope.aliyuncs.com/v1";
 export const MODELSTUDIO_DEFAULT_MODEL_ID = "qwen3.5-plus";

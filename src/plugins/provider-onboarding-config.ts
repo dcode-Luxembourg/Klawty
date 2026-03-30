@@ -73,10 +73,7 @@ export function applyOnboardAuthAgentModelsAndProviders(
   };
 }
 
-export function applyAgentDefaultModelPrimary(
-  cfg: KlawtyConfig,
-  primary: string,
-): KlawtyConfig {
+export function applyAgentDefaultModelPrimary(cfg: KlawtyConfig, primary: string): KlawtyConfig {
   const existingFallbacks = extractAgentDefaultModelFallbacks(cfg.agents?.defaults?.model);
   return {
     ...cfg,

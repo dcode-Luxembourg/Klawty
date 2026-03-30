@@ -1,7 +1,4 @@
-import {
-  createUnionActionGate,
-  listTokenSourcedAccounts,
-} from "klawty/plugin-sdk/channel-runtime";
+import { createUnionActionGate, listTokenSourcedAccounts } from "klawty/plugin-sdk/channel-runtime";
 import type {
   ChannelMessageActionAdapter,
   ChannelMessageActionName,

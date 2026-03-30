@@ -220,10 +220,7 @@ function setResolvedWebSearchApiKey(params: {
   params.provider.setCredentialValue(search, params.value);
 }
 
-function setResolvedFirecrawlApiKey(params: {
-  resolvedConfig: KlawtyConfig;
-  value: string;
-}): void {
+function setResolvedFirecrawlApiKey(params: { resolvedConfig: KlawtyConfig; value: string }): void {
   const tools = ensureObject(params.resolvedConfig as Record<string, unknown>, "tools");
   const web = ensureObject(tools, "web");
   const fetch = ensureObject(web, "fetch");

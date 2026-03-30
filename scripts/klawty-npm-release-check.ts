@@ -190,9 +190,7 @@ export function collectReleasePackageMetadataErrors(pkg: PackageJson): string[] 
     );
   }
   if (pkg.bin?.klawty !== "klawty.mjs") {
-    errors.push(
-      `package.json bin.klawty must be "klawty.mjs"; found "${pkg.bin?.klawty ?? ""}".`,
-    );
+    errors.push(`package.json bin.klawty must be "klawty.mjs"; found "${pkg.bin?.klawty ?? ""}".`);
   }
   if (pkg.peerDependencies?.["node-llama-cpp"] !== "3.16.2") {
     errors.push(

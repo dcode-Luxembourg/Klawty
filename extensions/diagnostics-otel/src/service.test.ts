@@ -242,19 +242,13 @@ describe("diagnostics-otel service", () => {
     });
 
     expect(telemetryState.counters.get("klawty.webhook.received")?.add).toHaveBeenCalled();
-    expect(
-      telemetryState.histograms.get("klawty.webhook.duration_ms")?.record,
-    ).toHaveBeenCalled();
+    expect(telemetryState.histograms.get("klawty.webhook.duration_ms")?.record).toHaveBeenCalled();
     expect(telemetryState.counters.get("klawty.message.queued")?.add).toHaveBeenCalled();
     expect(telemetryState.counters.get("klawty.message.processed")?.add).toHaveBeenCalled();
-    expect(
-      telemetryState.histograms.get("klawty.message.duration_ms")?.record,
-    ).toHaveBeenCalled();
+    expect(telemetryState.histograms.get("klawty.message.duration_ms")?.record).toHaveBeenCalled();
     expect(telemetryState.histograms.get("klawty.queue.wait_ms")?.record).toHaveBeenCalled();
     expect(telemetryState.counters.get("klawty.session.stuck")?.add).toHaveBeenCalled();
-    expect(
-      telemetryState.histograms.get("klawty.session.stuck_age_ms")?.record,
-    ).toHaveBeenCalled();
+    expect(telemetryState.histograms.get("klawty.session.stuck_age_ms")?.record).toHaveBeenCalled();
     expect(telemetryState.counters.get("klawty.run.attempt")?.add).toHaveBeenCalled();
 
     const spanNames = telemetryState.tracer.startSpan.mock.calls.map((call) => call[0]);

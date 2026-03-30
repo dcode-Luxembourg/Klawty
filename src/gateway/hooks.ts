@@ -144,9 +144,7 @@ export function extractHookToken(req: IncomingMessage): string | undefined {
     }
   }
   const headerToken =
-    typeof req.headers["x-klawty-token"] === "string"
-      ? req.headers["x-klawty-token"].trim()
-      : "";
+    typeof req.headers["x-klawty-token"] === "string" ? req.headers["x-klawty-token"].trim() : "";
   if (headerToken) {
     return headerToken;
   }

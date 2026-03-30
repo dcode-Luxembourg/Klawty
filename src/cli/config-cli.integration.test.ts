@@ -61,11 +61,7 @@ describe("config cli integration", () => {
     const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "klawty-config-cli-int-"));
     const configPath = path.join(tempDir, "klawty.json");
     const batchPath = path.join(tempDir, "batch.json");
-    const envSnapshot = captureEnv([
-      "KLAWTY_CONFIG_PATH",
-      "KLAWTY_TEST_FAST",
-      "DISCORD_BOT_TOKEN",
-    ]);
+    const envSnapshot = captureEnv(["KLAWTY_CONFIG_PATH", "KLAWTY_TEST_FAST", "DISCORD_BOT_TOKEN"]);
     try {
       fs.writeFileSync(
         configPath,

@@ -17,9 +17,9 @@ import {
 } from "./bash-tools.js";
 import { listChannelAgentTools } from "./channel-tools.js";
 import { resolveImageSanitizationLimits } from "./image-sanitization.js";
+import { createKlawtyTools } from "./klawty-tools.js";
 import type { ModelAuthMode } from "./model-auth.js";
 import { hasNativeWebSearchTool } from "./model-compat.js";
-import { createKlawtyTools } from "./klawty-tools.js";
 import { wrapToolWithAbortSignal } from "./pi-tools.abort.js";
 import { wrapToolWithBeforeToolCallHook } from "./pi-tools.before-tool-call.js";
 import {

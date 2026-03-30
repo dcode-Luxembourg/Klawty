@@ -10,10 +10,7 @@ const { listAccountIds: listZaloAccountIds, resolveDefaultAccountId: resolveDefa
   createAccountListHelpers("zalo");
 export { listZaloAccountIds, resolveDefaultZaloAccountId };
 
-function resolveAccountConfig(
-  cfg: KlawtyConfig,
-  accountId: string,
-): ZaloAccountConfig | undefined {
+function resolveAccountConfig(cfg: KlawtyConfig, accountId: string): ZaloAccountConfig | undefined {
   const accounts = (cfg.channels?.zalo as ZaloConfig | undefined)?.accounts;
   if (!accounts || typeof accounts !== "object") {
     return undefined;

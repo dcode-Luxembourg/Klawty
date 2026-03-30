@@ -82,8 +82,7 @@ vi.mock("klawty/plugin-sdk/channel-runtime", async (importOriginal) => {
   };
 });
 vi.mock("klawty/plugin-sdk/channel-reply-pipeline", async (importOriginal) => {
-  const actual =
-    await importOriginal<typeof import("klawty/plugin-sdk/channel-reply-pipeline")>();
+  const actual = await importOriginal<typeof import("klawty/plugin-sdk/channel-reply-pipeline")>();
   return {
     ...actual,
     createChannelReplyPipeline: replyPipelineMocks.createChannelReplyPipeline,

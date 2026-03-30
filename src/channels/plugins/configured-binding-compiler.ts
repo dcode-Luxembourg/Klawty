@@ -25,10 +25,7 @@ type CachedCompiledConfiguredBindingRegistry = {
   registry: CompiledConfiguredBindingRegistry;
 };
 
-const compiledRegistryCache = new WeakMap<
-  KlawtyConfig,
-  CachedCompiledConfiguredBindingRegistry
->();
+const compiledRegistryCache = new WeakMap<KlawtyConfig, CachedCompiledConfiguredBindingRegistry>();
 
 function findChannelPlugin(params: {
   registry:
@@ -215,9 +212,7 @@ export function resolveCompiledBindingRegistry(
   return registry;
 }
 
-export function primeCompiledBindingRegistry(
-  cfg: KlawtyConfig,
-): CompiledConfiguredBindingRegistry {
+export function primeCompiledBindingRegistry(cfg: KlawtyConfig): CompiledConfiguredBindingRegistry {
   const registry = compileConfiguredBindingRegistry({ cfg });
   compiledRegistryCache.set(cfg, {
     registryVersion: getActivePluginRegistryVersion(),

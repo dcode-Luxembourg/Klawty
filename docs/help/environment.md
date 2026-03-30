@@ -103,16 +103,16 @@ Both resolve from process env at activation time. SecretRef details are document
 
 ## Path-related env vars
 
-| Variable               | Purpose                                                                                                                                                                          |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Variable             | Purpose                                                                                                                                                                      |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `KLAWTY_HOME`        | Override the home directory used for all internal path resolution (`~/.klawty/`, agent dirs, sessions, credentials). Useful when running Klawty as a dedicated service user. |
-| `KLAWTY_STATE_DIR`   | Override the state directory (default `~/.klawty`).                                                                                                                            |
+| `KLAWTY_STATE_DIR`   | Override the state directory (default `~/.klawty`).                                                                                                                          |
 | `KLAWTY_CONFIG_PATH` | Override the config file path (default `~/.klawty/klawty.json`).                                                                                                             |
 
 ## Logging
 
-| Variable             | Purpose                                                                                                                                                                                      |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Variable           | Purpose                                                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `KLAWTY_LOG_LEVEL` | Override log level for both file and console (e.g. `debug`, `trace`). Takes precedence over `logging.level` and `logging.consoleLevel` in config. Invalid values are ignored with a warning. |
 
 ### `KLAWTY_HOME`

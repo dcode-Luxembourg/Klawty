@@ -295,13 +295,7 @@ describe("maybeRepairGatewayServiceConfig", () => {
       issues: [],
     });
     mocks.buildGatewayInstallPlan.mockResolvedValue({
-      programArguments: [
-        "/usr/bin/node",
-        "/opt/klawty/dist/index.js",
-        "gateway",
-        "--port",
-        "2508",
-      ],
+      programArguments: ["/usr/bin/node", "/opt/klawty/dist/index.js", "gateway", "--port", "2508"],
       environment: {},
     });
     fsMocks.realpath.mockRejectedValue(new Error("no realpath"));

@@ -3,10 +3,7 @@ import {
   collectIssuesForEnabledAccounts,
   isRecord,
 } from "klawty/plugin-sdk/channel-runtime";
-import type {
-  ChannelAccountSnapshot,
-  ChannelStatusIssue,
-} from "klawty/plugin-sdk/channel-runtime";
+import type { ChannelAccountSnapshot, ChannelStatusIssue } from "klawty/plugin-sdk/channel-runtime";
 import { formatCliCommand } from "klawty/plugin-sdk/cli-runtime";
 
 type WhatsAppAccountStatus = {

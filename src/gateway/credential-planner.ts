@@ -84,11 +84,7 @@ export function readGatewayTokenEnv(
   env: NodeJS.ProcessEnv = process.env,
   includeLegacyEnv = true,
 ): string | undefined {
-  return readGatewayEnv(
-    env,
-    ["KLAWTY_GATEWAY_TOKEN", "CLAWDBOT_GATEWAY_TOKEN"],
-    includeLegacyEnv,
-  );
+  return readGatewayEnv(env, ["KLAWTY_GATEWAY_TOKEN", "CLAWDBOT_GATEWAY_TOKEN"], includeLegacyEnv);
 }
 
 export function readGatewayPasswordEnv(

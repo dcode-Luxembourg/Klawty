@@ -148,11 +148,11 @@ launchctl bootout gui/$UID/ai.klawty.ssh-tunnel
 
 ## How It Works
 
-| Component                            | What It Does                                                 |
-| ------------------------------------ | ------------------------------------------------------------ |
-| `LocalForward 2508 127.0.0.1:2508` | Forwards local port 2508 to remote port 2508               |
-| `ssh -N`                             | SSH without executing remote commands (just port forwarding) |
-| `KeepAlive`                          | Automatically restarts tunnel if it crashes                  |
-| `RunAtLoad`                          | Starts tunnel when the agent loads                           |
+| Component                          | What It Does                                                 |
+| ---------------------------------- | ------------------------------------------------------------ |
+| `LocalForward 2508 127.0.0.1:2508` | Forwards local port 2508 to remote port 2508                 |
+| `ssh -N`                           | SSH without executing remote commands (just port forwarding) |
+| `KeepAlive`                        | Automatically restarts tunnel if it crashes                  |
+| `RunAtLoad`                        | Starts tunnel when the agent loads                           |
 
 Klawty.app connects to `ws://127.0.0.1:2508` on your client machine. The SSH tunnel forwards that connection to port 2508 on the remote machine where the Gateway is running.

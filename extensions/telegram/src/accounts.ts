@@ -10,10 +10,7 @@ import {
   type KlawtyConfig,
 } from "klawty/plugin-sdk/account-resolution";
 import { isTruthyEnvValue } from "klawty/plugin-sdk/infra-runtime";
-import {
-  listBoundAccountIds,
-  resolveDefaultAgentBoundAccountId,
-} from "klawty/plugin-sdk/routing";
+import { listBoundAccountIds, resolveDefaultAgentBoundAccountId } from "klawty/plugin-sdk/routing";
 import { formatSetExplicitDefaultInstruction } from "klawty/plugin-sdk/routing";
 import { createSubsystemLogger } from "klawty/plugin-sdk/runtime-env";
 import type { TelegramAccountConfig, TelegramActionConfig } from "../runtime-api.js";

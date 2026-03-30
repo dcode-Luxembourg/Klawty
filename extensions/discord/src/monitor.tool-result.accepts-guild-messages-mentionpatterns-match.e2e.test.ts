@@ -294,10 +294,7 @@ describe("discord tool result dispatch", () => {
       const handler = await createHandler(cfg);
       const client = createGuildTextClient();
 
-      await handler(
-        createGuildMessageEvent({ messageId: "m2", content: "klawty: hello" }),
-        client,
-      );
+      await handler(createGuildMessageEvent({ messageId: "m2", content: "klawty: hello" }), client);
 
       await vi.waitFor(() => expect(dispatchMock).toHaveBeenCalledTimes(1));
       expect(dispatchMock).toHaveBeenCalledTimes(1);

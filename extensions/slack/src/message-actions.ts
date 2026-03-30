@@ -1,8 +1,5 @@
 import { createActionGate } from "klawty/plugin-sdk/agent-runtime";
-import type {
-  ChannelMessageActionName,
-  ChannelToolSend,
-} from "klawty/plugin-sdk/channel-runtime";
+import type { ChannelMessageActionName, ChannelToolSend } from "klawty/plugin-sdk/channel-runtime";
 import type { KlawtyConfig } from "klawty/plugin-sdk/config-runtime";
 import { listEnabledSlackAccounts } from "./accounts.js";
 

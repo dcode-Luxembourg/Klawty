@@ -8,10 +8,7 @@ import {
   resolveDiscordEffectiveRoute,
 } from "./route-resolution.js";
 
-function buildWorkerBindingConfig(peer: {
-  kind: "channel" | "direct";
-  id: string;
-}): KlawtyConfig {
+function buildWorkerBindingConfig(peer: { kind: "channel" | "direct"; id: string }): KlawtyConfig {
   return {
     agents: {
       list: [{ id: "worker" }],

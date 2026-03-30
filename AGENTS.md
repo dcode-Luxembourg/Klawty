@@ -18,6 +18,11 @@
   - Core channel code: `src/telegram`, `src/discord`, `src/slack`, `src/signal`, `src/imessage`, `src/web` (WhatsApp web), `src/channels`, `src/routing`
   - Extensions (channel plugins): `extensions/*` (e.g. `extensions/msteams`, `extensions/matrix`, `extensions/zalo`, `extensions/zalouser`, `extensions/voice-call`)
 - When adding channels/extensions/apps/docs, update `.github/labeler.yml` and create matching GitHub labels (use existing channel/extension label colors).
+- Runtime modules: `runtime/` (12 core JS modules) and `runtime/premium/` (5 paid feature modules) are shipped in customer ZIPs. Validate with `node --check` after changes.
+- Security modules: `src/security/` (8 JS modules: policy-enforcer, exec-sandbox, privacy-router, etc.) also ship in ZIPs.
+- Workspace template: `workspace/` is the default agent workspace shipped with the OS. Contains `klawty.json`, `AGENTS.md`, `SOUL.md`, `IDENTITY.md`, `TOOLS.md`, `USER.md`, `MEMORY.md`, and `agents/main/AGENT.md`.
+- Agent definition: one `AGENT.md` per agent with YAML frontmatter (name, role, model, tools, channel). No JavaScript per agent — the runtime reads frontmatter declaratively.
+- Comprehensive install and plugin guide: `docs/INSTALL-AND-PLUGINS.md`.
 
 ## Docs Linking (Mintlify)
 
@@ -105,6 +110,8 @@
 - Framework: Vitest with V8 coverage thresholds (70% lines/branches/functions/statements).
 - Naming: match source names with `*.test.ts`; e2e in `*.e2e.test.ts`.
 - Run `pnpm test` (or `pnpm test:coverage`) before pushing when you touch logic.
+- Rebrand artifact warning: binary test fixtures in `test/fixtures/plugins-install/` and `test/fixtures/hooks-install/` may contain stale `"openclaw"` package keys instead of `"klawty"`. These are archives (.tgz, .tar, .zip) — inspect with `tar -xf ... -O package/package.json`. The manifest key is `MANIFEST_KEY = "klawty"` (see `src/compat/legacy-names.ts`); `LEGACY_PROJECT_NAMES` is empty — no backward compat for old key.
+- Extension runtime-api.ts guardrail: files must use `klawty/plugin-sdk/<subpath>` not relative `../../src/plugin-sdk/` paths. Enforced by `src/plugin-sdk/runtime-api-guardrails.test.ts`.
 - Agents MUST NOT modify baseline, inventory, ignore, snapshot, or expected-failure files to silence failing checks without explicit approval in this chat.
 - For targeted/local debugging, keep using the wrapper: `pnpm test -- <path-or-filter> [vitest args...]` (for example `pnpm test -- src/commands/onboard-search.test.ts -t "shows registered plugin providers"`); do not default to raw `pnpm vitest run ...` because it bypasses wrapper config/profile/pool routing.
 - Do not set test workers above 16; tried already.

@@ -35,9 +35,7 @@ const RUNTIME_API_EXPORT_GUARDS: Record<string, readonly string[]> = {
     'export { sendMessageIMessage } from "./src/send.js";',
   ],
   "extensions/googlechat/runtime-api.ts": ['export * from "klawty/plugin-sdk/googlechat";'],
-  "extensions/nextcloud-talk/runtime-api.ts": [
-    'export * from "klawty/plugin-sdk/nextcloud-talk";',
-  ],
+  "extensions/nextcloud-talk/runtime-api.ts": ['export * from "klawty/plugin-sdk/nextcloud-talk";'],
   "extensions/signal/runtime-api.ts": ['export * from "./src/runtime-api.js";'],
   "extensions/slack/runtime-api.ts": [
     'export * from "./src/action-runtime.js";',

@@ -1383,10 +1383,7 @@ export function clearConfigCache(): void {
   configCache = null;
 }
 
-export function setRuntimeConfigSnapshot(
-  config: KlawtyConfig,
-  sourceConfig?: KlawtyConfig,
-): void {
+export function setRuntimeConfigSnapshot(config: KlawtyConfig, sourceConfig?: KlawtyConfig): void {
   runtimeConfigSnapshot = config;
   runtimeConfigSourceSnapshot = sourceConfig ?? null;
   clearConfigCache();

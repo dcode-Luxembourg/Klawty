@@ -95,8 +95,7 @@ describe("resolveKlawtyPackageRoot", () => {
 
   beforeEach(async () => {
     vi.resetModules();
-    ({ resolveKlawtyPackageRoot, resolveKlawtyPackageRootSync } =
-      await import("./klawty-root.js"));
+    ({ resolveKlawtyPackageRoot, resolveKlawtyPackageRootSync } = await import("./klawty-root.js"));
     state.entries.clear();
     state.realpaths.clear();
     state.realpathErrors.clear();

@@ -22,11 +22,7 @@ function expectNoMissingDefaultWarning() {
   expect(warningLines().every((line) => !line.includes("accounts.default is missing"))).toBe(true);
 }
 
-function resolveAccountWithEnv(
-  env: Record<string, string>,
-  cfg: KlawtyConfig,
-  accountId?: string,
-) {
+function resolveAccountWithEnv(env: Record<string, string>, cfg: KlawtyConfig, accountId?: string) {
   return withEnv(env, () => resolveTelegramAccount({ cfg, ...(accountId ? { accountId } : {}) }));
 }
 

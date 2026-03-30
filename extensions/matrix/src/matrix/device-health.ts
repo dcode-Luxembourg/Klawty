@@ -20,9 +20,7 @@ export function summarizeMatrixDeviceHealth(
   devices: MatrixManagedDeviceInfo[],
 ): MatrixDeviceHealthSummary {
   const currentDeviceId = devices.find((device) => device.current)?.deviceId ?? null;
-  const klawtyDevices = devices.filter((device) =>
-    isKlawtyManagedMatrixDevice(device.displayName),
-  );
+  const klawtyDevices = devices.filter((device) => isKlawtyManagedMatrixDevice(device.displayName));
   return {
     currentDeviceId,
     staleKlawtyDevices: klawtyDevices.filter((device) => !device.current),

@@ -439,8 +439,8 @@ klawty pairing list feishu
 
 ## Gateway management commands
 
-| Command                    | Description                   |
-| -------------------------- | ----------------------------- |
+| Command                  | Description                   |
+| ------------------------ | ----------------------------- |
 | `klawty gateway status`  | Show gateway status           |
 | `klawty gateway install` | Install/start gateway service |
 | `klawty gateway stop`    | Stop gateway service          |

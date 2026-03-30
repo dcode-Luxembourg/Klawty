@@ -59,11 +59,7 @@ async function resolveChannelPluginForMode(
   };
 }
 
-function resolveAccountContext(
-  plugin: ChannelPlugin,
-  opts: ChannelAuthOptions,
-  cfg: KlawtyConfig,
-) {
+function resolveAccountContext(plugin: ChannelPlugin, opts: ChannelAuthOptions, cfg: KlawtyConfig) {
   const accountId = opts.account?.trim() || resolveChannelDefaultAccountId({ plugin, cfg });
   return { accountId };
 }

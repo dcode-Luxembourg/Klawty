@@ -386,10 +386,7 @@ const formatMediaUnderstandingLine = (decisions?: ReadonlyArray<MediaUnderstandi
   return `📎 Media: ${parts.join(" · ")}`;
 };
 
-const formatVoiceModeLine = (
-  config?: KlawtyConfig,
-  sessionEntry?: SessionEntry,
-): string | null => {
+const formatVoiceModeLine = (config?: KlawtyConfig, sessionEntry?: SessionEntry): string | null => {
   if (!config) {
     return null;
   }

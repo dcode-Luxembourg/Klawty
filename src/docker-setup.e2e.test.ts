@@ -374,9 +374,7 @@ describe("docker-setup.sh", () => {
         .split("\n")
         .filter(
           (line) =>
-            line.includes("compose") &&
-            line.includes(" up -d") &&
-            line.includes("klawty-gateway"),
+            line.includes("compose") && line.includes(" up -d") && line.includes("klawty-gateway"),
         );
       expect(gatewayStarts).toHaveLength(2);
       expect(log).toContain(
@@ -478,9 +476,7 @@ describe("docker-setup.sh", () => {
 
   it("keeps docker-compose gateway token env defaults aligned across services", async () => {
     const compose = await readFile(join(repoRoot, "docker-compose.yml"), "utf8");
-    expect(compose.match(/KLAWTY_GATEWAY_TOKEN: \$\{KLAWTY_GATEWAY_TOKEN:-\}/g)).toHaveLength(
-      2,
-    );
+    expect(compose.match(/KLAWTY_GATEWAY_TOKEN: \$\{KLAWTY_GATEWAY_TOKEN:-\}/g)).toHaveLength(2);
   });
 
   it("keeps docker-compose timezone env defaults aligned across services", async () => {

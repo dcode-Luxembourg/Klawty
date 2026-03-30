@@ -13,10 +13,7 @@ import type { APISelectMenuOption } from "discord-api-types/v10";
 import { ButtonStyle } from "discord-api-types/v10";
 import { normalizeProviderId } from "klawty/plugin-sdk/agent-runtime";
 import type { KlawtyConfig } from "klawty/plugin-sdk/config-runtime";
-import {
-  buildModelsProviderData,
-  type ModelsProviderData,
-} from "klawty/plugin-sdk/reply-runtime";
+import { buildModelsProviderData, type ModelsProviderData } from "klawty/plugin-sdk/reply-runtime";
 
 export const DISCORD_MODEL_PICKER_CUSTOM_ID_KEY = "mdlpk";
 export const DISCORD_CUSTOM_ID_MAX_CHARS = 100;

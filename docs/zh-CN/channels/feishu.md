@@ -444,8 +444,8 @@ klawty pairing list feishu
 
 ## Gateway 网关管理命令
 
-| Command                    | Description                |
-| -------------------------- | -------------------------- |
+| Command                  | Description                |
+| ------------------------ | -------------------------- |
 | `klawty gateway status`  | 显示 Gateway 网关状态      |
 | `klawty gateway install` | 安装/启动 Gateway 网关服务 |
 | `klawty gateway stop`    | 停止 Gateway 网关服务      |

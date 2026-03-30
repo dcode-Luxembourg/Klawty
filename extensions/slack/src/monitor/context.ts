@@ -1,9 +1,6 @@
 import type { App } from "@slack/bolt";
 import { formatAllowlistMatchMeta } from "klawty/plugin-sdk/channel-runtime";
-import type {
-  KlawtyConfig,
-  SlackReactionNotificationMode,
-} from "klawty/plugin-sdk/config-runtime";
+import type { KlawtyConfig, SlackReactionNotificationMode } from "klawty/plugin-sdk/config-runtime";
 import { resolveSessionKey, type SessionScope } from "klawty/plugin-sdk/config-runtime";
 import type { DmPolicy, GroupPolicy } from "klawty/plugin-sdk/config-runtime";
 import { createDedupeCache } from "klawty/plugin-sdk/infra-runtime";

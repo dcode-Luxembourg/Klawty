@@ -11,9 +11,7 @@ import type { DiscordSenderIdentity } from "./sender-identity.js";
 export type { DiscordSenderIdentity } from "./sender-identity.js";
 import type { DiscordThreadChannel } from "./threading.js";
 
-export type LoadedConfig = ReturnType<
-  typeof import("klawty/plugin-sdk/config-runtime").loadConfig
->;
+export type LoadedConfig = ReturnType<typeof import("klawty/plugin-sdk/config-runtime").loadConfig>;
 export type RuntimeEnv = import("klawty/plugin-sdk/runtime-env").RuntimeEnv;
 
 export type DiscordMessageEvent = import("./listeners.js").DiscordMessageEvent;

@@ -13,8 +13,7 @@ type FindCommandByNativeName =
 type ListNativeCommandSpecsForConfig =
   typeof import("klawty/plugin-sdk/reply-runtime").listNativeCommandSpecsForConfig;
 type ParseCommandArgs = typeof import("klawty/plugin-sdk/reply-runtime").parseCommandArgs;
-type ResolveCommandArgMenu =
-  typeof import("klawty/plugin-sdk/reply-runtime").resolveCommandArgMenu;
+type ResolveCommandArgMenu = typeof import("klawty/plugin-sdk/reply-runtime").resolveCommandArgMenu;
 
 export function buildCommandTextFromArgs(
   ...args: Parameters<BuildCommandTextFromArgs>

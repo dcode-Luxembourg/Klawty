@@ -28,10 +28,9 @@ describe("ports-format", () => {
     ] as const;
 
     for (const testCase of cases) {
-      expect(
-        classifyPortListener(testCase.listener, 2508),
-        JSON.stringify(testCase.listener),
-      ).toBe(testCase.expected);
+      expect(classifyPortListener(testCase.listener, 2508), JSON.stringify(testCase.listener)).toBe(
+        testCase.expected,
+      );
     }
   });
 

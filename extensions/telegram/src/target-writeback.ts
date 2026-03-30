@@ -1,8 +1,5 @@
 import type { KlawtyConfig } from "klawty/plugin-sdk/config-runtime";
-import {
-  readConfigFileSnapshotForWrite,
-  writeConfigFile,
-} from "klawty/plugin-sdk/config-runtime";
+import { readConfigFileSnapshotForWrite, writeConfigFile } from "klawty/plugin-sdk/config-runtime";
 import {
   loadCronStore,
   resolveCronStorePath,

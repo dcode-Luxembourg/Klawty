@@ -176,9 +176,7 @@ export function createLlmTaskTool(api: KlawtyPluginApi) {
 
       let tmpDir: string | null = null;
       try {
-        tmpDir = await fs.mkdtemp(
-          path.join(resolvePreferredKlawtyTmpDir(), "klawty-llm-task-"),
-        );
+        tmpDir = await fs.mkdtemp(path.join(resolvePreferredKlawtyTmpDir(), "klawty-llm-task-"));
         const sessionId = `llm-task-${Date.now()}`;
         const sessionFile = path.join(tmpDir, "session.json");
 

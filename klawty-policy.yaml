@@ -236,9 +236,9 @@ execution:
     - "cat ~/.ssh/"
     - "cat ~/.aws/"
 
-  max_execution_time: 30        # seconds per command
-  max_output_size: "1MB"        # truncate stdout/stderr beyond this
-  inherit_env: false            # do not pass full env to subprocesses
+  max_execution_time: 30 # seconds per command
+  max_output_size: "1MB" # truncate stdout/stderr beyond this
+  inherit_env: false # do not pass full env to subprocesses
   allowed_env:
     - "PATH"
     - "HOME"
@@ -248,13 +248,13 @@ execution:
 
 # ── Resource Limits ───────────────────────────────────────────────────────────
 resources:
-  max_file_size: "10MB"          # per file write operation
-  max_disk_usage: "5GB"          # total workspace disk budget
-  max_memory_per_agent: "512MB"  # RSS limit per agent process
-  max_concurrent_tools: 3        # parallel tool executions per agent
-  max_open_files: 100            # file descriptor limit per agent
-  max_llm_calls_per_cycle: 20   # prevent runaway inference loops
-  max_tool_rounds: 15            # tool-calling loop limit per task
+  max_file_size: "10MB" # per file write operation
+  max_disk_usage: "5GB" # total workspace disk budget
+  max_memory_per_agent: "512MB" # RSS limit per agent process
+  max_concurrent_tools: 3 # parallel tool executions per agent
+  max_open_files: 100 # file descriptor limit per agent
+  max_llm_calls_per_cycle: 20 # prevent runaway inference loops
+  max_tool_rounds: 15 # tool-calling loop limit per task
 
 # ── Rate Limits ───────────────────────────────────────────────────────────────
 rate_limits:
@@ -262,28 +262,28 @@ rate_limits:
   channel_posts:
     max: 10
     window: "5m"
-    action: "queue"              # queue excess messages instead of dropping
+    action: "queue" # queue excess messages instead of dropping
 
   email_sends:
     max: 5
     window: "1h"
-    action: "block"              # hard block — requires human approval
+    action: "block" # hard block — requires human approval
 
   api_calls:
     max: 100
     window: "1m"
-    action: "throttle"           # slow down, don't block
+    action: "throttle" # slow down, don't block
 
   task_creation:
     max: 20
     window: "1h"
-    action: "block"              # prevent task spam
+    action: "block" # prevent task spam
 
 # ── Privacy ───────────────────────────────────────────────────────────────────
 # PII detection — route sensitive data to local models when enabled.
 privacy:
-  enabled: false                  # set to true + configure local_model
-  local_model: ""                 # e.g., "ollama/llama3.1:8b"
+  enabled: false # set to true + configure local_model
+  local_model: "" # e.g., "ollama/llama3.1:8b"
 
   pii_patterns:
     - name: "email"
@@ -311,7 +311,7 @@ privacy:
     - "passport"
     - "driver license"
 
-  action: "local_inference"       # "local_inference" | "redact" | "block"
+  action: "local_inference" # "local_inference" | "redact" | "block"
   log_detections: true
   redaction_placeholder: "[REDACTED]"
 
@@ -320,7 +320,7 @@ privacy:
 audit:
   enabled: true
   log_path: "observability/policy-audit.jsonl"
-  log_allowed: false              # set true to log allowed actions too (verbose)
+  log_allowed: false # set true to log allowed actions too (verbose)
   log_blocked: true
   log_rate_limited: true
   retention_days: 90

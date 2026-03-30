@@ -13,10 +13,7 @@ export function buildNpmResolutionInstallFields(
   return buildNpmResolutionFields(resolution);
 }
 
-export function recordPluginInstall(
-  cfg: KlawtyConfig,
-  update: PluginInstallUpdate,
-): KlawtyConfig {
+export function recordPluginInstall(cfg: KlawtyConfig, update: PluginInstallUpdate): KlawtyConfig {
   const { pluginId, ...record } = update;
   const installs = {
     ...cfg.plugins?.installs,

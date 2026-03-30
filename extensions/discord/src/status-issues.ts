@@ -4,10 +4,7 @@ import {
   isRecord,
   resolveEnabledConfiguredAccountId,
 } from "klawty/plugin-sdk/channel-runtime";
-import type {
-  ChannelAccountSnapshot,
-  ChannelStatusIssue,
-} from "klawty/plugin-sdk/channel-runtime";
+import type { ChannelAccountSnapshot, ChannelStatusIssue } from "klawty/plugin-sdk/channel-runtime";
 
 type DiscordIntentSummary = {
   messageContent?: "enabled" | "limited" | "disabled";

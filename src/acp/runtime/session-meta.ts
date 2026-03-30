@@ -43,10 +43,10 @@ function resolveStoreSessionKey(store: Record<string, SessionEntry>, sessionKey:
   return lower;
 }
 
-export function resolveSessionStorePathForAcp(params: {
-  sessionKey: string;
-  cfg?: KlawtyConfig;
-}): { cfg: KlawtyConfig; storePath: string } {
+export function resolveSessionStorePathForAcp(params: { sessionKey: string; cfg?: KlawtyConfig }): {
+  cfg: KlawtyConfig;
+  storePath: string;
+} {
   const cfg = params.cfg ?? loadConfig();
   const parsed = parseAgentSessionKey(params.sessionKey);
   const storePath = resolveStorePath(cfg.session?.store, {

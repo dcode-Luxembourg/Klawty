@@ -57,31 +57,31 @@ cd Klawty && docker compose up -d
 
 ## Architecture
 
-| Layer | Source | What it provides |
-|-------|--------|-----------------|
-| **Platform** | [OpenClaw](https://github.com/openclaw/openclaw) (MIT) | CLI, 20+ channels, plugin SDK, gateway, memory, native apps, 52 skills |
-| **Security** | dcode technologies | Policy engine, Docker exec sandbox, PII detection, credential monitoring, integrity checks |
-| **Agent Runtime** | Klawty (premium) | 5-tier LLM routing, 4-tier memory, proposals, dedup, self-improvement |
+| Layer             | Source                                                 | What it provides                                                                           |
+| ----------------- | ------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| **Platform**      | [OpenClaw](https://github.com/openclaw/openclaw) (MIT) | CLI, 20+ channels, plugin SDK, gateway, memory, native apps, 52 skills                     |
+| **Security**      | dcode technologies                                     | Policy engine, Docker exec sandbox, PII detection, credential monitoring, integrity checks |
+| **Agent Runtime** | Klawty (premium)                                       | 5-tier LLM routing, 4-tier memory, proposals, dedup, self-improvement                      |
 
 ---
 
 ## What's Included (Free)
 
-| Feature | Details |
-|---------|---------|
-| **1 agent (Atlas)** | General-purpose orchestrator with read-only tools |
-| **CLI (40+ commands)** | `klawty run`, `status`, `stop`, `tui`, `logs`, `onboard`, `doctor`, ... |
-| **20+ channels** | Discord, Slack, Telegram, WhatsApp, Signal, Matrix, IRC, Teams, ... |
-| **52 community skills** | Web research, coding, data analysis, comms, devops, ... |
-| **Plugin SDK** | Build custom skills and channel integrations |
-| **Security policy** | `klawty-policy.yaml` — deny-by-default (network, filesystem, exec) |
-| **Docker exec sandbox** | Shell commands in isolated containers (no network, read-only) |
-| **PII detection** | Email, phone, credit card, IBAN auto-detect + local routing |
-| **Credential monitor** | API key validation every 6 hours, balance alerts |
-| **Runtime integrity** | SHA-256 manifest verified on every boot |
-| **TUI dashboard** | Full-screen terminal: agents, tasks, costs, health |
-| **Docker deployment** | docker-compose.yml included |
-| **File-based memory** | MEMORY.md (50 lines) — persistent across restarts |
+| Feature                 | Details                                                                 |
+| ----------------------- | ----------------------------------------------------------------------- |
+| **1 agent (Atlas)**     | General-purpose orchestrator with read-only tools                       |
+| **CLI (40+ commands)**  | `klawty run`, `status`, `stop`, `tui`, `logs`, `onboard`, `doctor`, ... |
+| **20+ channels**        | Discord, Slack, Telegram, WhatsApp, Signal, Matrix, IRC, Teams, ...     |
+| **52 community skills** | Web research, coding, data analysis, comms, devops, ...                 |
+| **Plugin SDK**          | Build custom skills and channel integrations                            |
+| **Security policy**     | `klawty-policy.yaml` — deny-by-default (network, filesystem, exec)      |
+| **Docker exec sandbox** | Shell commands in isolated containers (no network, read-only)           |
+| **PII detection**       | Email, phone, credit card, IBAN auto-detect + local routing             |
+| **Credential monitor**  | API key validation every 6 hours, balance alerts                        |
+| **Runtime integrity**   | SHA-256 manifest verified on every boot                                 |
+| **TUI dashboard**       | Full-screen terminal: agents, tasks, costs, health                      |
+| **Docker deployment**   | docker-compose.yml included                                             |
+| **File-based memory**   | MEMORY.md (50 lines) — persistent across restarts                       |
 
 ---
 
@@ -133,16 +133,16 @@ klawty --version         # Klawty 1.0.0
 
 All security modules live in `src/security/` — real code, not templates.
 
-| Module | Lines | What it does |
-|--------|-------|-------------|
-| `policy-enforcer.js` | 493 | Reads `klawty-policy.yaml`, enforces network/filesystem/exec rules |
-| `exec-sandbox.js` | 229 | Runs shell commands in Docker containers (no network, read-only root) |
-| `privacy-router.js` | 211 | Detects PII (email, phone, IBAN) → local model routing or redaction |
-| `credential-monitor.js` | 448 | Validates API keys every 6h, alerts on expiry or low balance |
-| `integrity-check.js` | 188 | SHA-256 manifest of all modules, verified on every boot |
-| `auto-update.js` | 470 | Version check + download + rollback on failure |
-| `tui-dashboard.js` | 624 | Full-screen ANSI dashboard: agents, tasks, costs, health |
-| `klawty-boot.js` | 95 | Boot hook — initializes all security modules on gateway start |
+| Module                  | Lines | What it does                                                          |
+| ----------------------- | ----- | --------------------------------------------------------------------- |
+| `policy-enforcer.js`    | 493   | Reads `klawty-policy.yaml`, enforces network/filesystem/exec rules    |
+| `exec-sandbox.js`       | 229   | Runs shell commands in Docker containers (no network, read-only root) |
+| `privacy-router.js`     | 211   | Detects PII (email, phone, IBAN) → local model routing or redaction   |
+| `credential-monitor.js` | 448   | Validates API keys every 6h, alerts on expiry or low balance          |
+| `integrity-check.js`    | 188   | SHA-256 manifest of all modules, verified on every boot               |
+| `auto-update.js`        | 470   | Version check + download + rollback on failure                        |
+| `tui-dashboard.js`      | 624   | Full-screen ANSI dashboard: agents, tasks, costs, health              |
+| `klawty-boot.js`        | 95    | Boot hook — initializes all security modules on gateway start         |
 
 **Total: 2,758 lines of custom security code.**
 
@@ -170,20 +170,20 @@ workspace/
 
 ## Channels
 
-| Stable | Beta |
-|--------|------|
+| Stable                                                                                                   | Beta                                                 |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
 | Discord · Slack · Telegram · WhatsApp · Signal · Matrix · MS Teams · IRC · Line · Nostr · Terminal · Web | iMessage (macOS) · Google Chat · Mattermost · Twitch |
 
 ---
 
 ## System Requirements
 
-| Resource | Minimum | Recommended |
-|----------|---------|-------------|
-| Node.js | 22+ | Latest LTS |
-| RAM | 2 GB | 8 GB |
-| Docker | Optional | Recommended (for exec sandbox) |
-| OS | macOS, Linux, WSL2 | macOS or Ubuntu 22.04+ |
+| Resource | Minimum            | Recommended                    |
+| -------- | ------------------ | ------------------------------ |
+| Node.js  | 22+                | Latest LTS                     |
+| RAM      | 2 GB               | 8 GB                           |
+| Docker   | Optional           | Recommended (for exec sandbox) |
+| OS       | macOS, Linux, WSL2 | macOS or Ubuntu 22.04+         |
 
 ---
 
@@ -222,6 +222,7 @@ ssh -L 2508:127.0.0.1:2508 -L 3100:127.0.0.1:3100 -L 6333:127.0.0.1:6333 user@yo
 Then open `http://localhost:2508` (Gateway) or `http://localhost:3100` (Board) in your browser.
 
 **Why SSH tunnels:**
+
 - Zero attack surface — services invisible to the internet
 - No auth overhead — SSH key is the auth
 - Works from anywhere — any machine with SSH access
@@ -256,7 +257,7 @@ cd Klawty && pnpm install && pnpm build && pnpm test
 
 **Built by [dcode technologies](https://d-code.lu) · Luxembourg 🇱🇺**
 
-*Security-hardened fork of OpenClaw. MIT license preserved.*
+_Security-hardened fork of OpenClaw. MIT license preserved._
 
 [klawty.ai](https://klawty.ai) · [ai-agent-builder.ai](https://ai-agent-builder.ai) · [d-code.lu](https://d-code.lu)
 

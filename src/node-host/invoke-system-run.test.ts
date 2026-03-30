@@ -968,9 +968,7 @@ describe("handleSystemRunInvoke mac app exec host routing", () => {
     await withFakeRuntimeOnPath({
       runtime: "tsx",
       run: async () => {
-        const tmp = fs.mkdtempSync(
-          path.join(os.tmpdir(), "klawty-approval-tsx-missing-binding-"),
-        );
+        const tmp = fs.mkdtempSync(path.join(os.tmpdir(), "klawty-approval-tsx-missing-binding-"));
         const fixture = createRuntimeScriptOperandFixture({ tmp, runtime: "tsx" });
         fs.writeFileSync(fixture.scriptPath, fixture.initialBody);
         try {

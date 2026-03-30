@@ -148,13 +148,11 @@ describe("modelsAuthLoginCommand", () => {
     mocks.resolveAgentWorkspaceDir.mockReturnValue("/tmp/klawty/workspace");
     mocks.resolveDefaultAgentWorkspaceDir.mockReturnValue("/tmp/klawty/workspace");
     mocks.loadValidConfigOrThrow.mockImplementation(async () => currentConfig);
-    mocks.updateConfig.mockImplementation(
-      async (mutator: (cfg: KlawtyConfig) => KlawtyConfig) => {
-        lastUpdatedConfig = mutator(currentConfig);
-        currentConfig = lastUpdatedConfig;
-        return lastUpdatedConfig;
-      },
-    );
+    mocks.updateConfig.mockImplementation(async (mutator: (cfg: KlawtyConfig) => KlawtyConfig) => {
+      lastUpdatedConfig = mutator(currentConfig);
+      currentConfig = lastUpdatedConfig;
+      return lastUpdatedConfig;
+    });
     mocks.createClackPrompter.mockReturnValue({
       note: vi.fn(async () => {}),
       select: vi.fn(),

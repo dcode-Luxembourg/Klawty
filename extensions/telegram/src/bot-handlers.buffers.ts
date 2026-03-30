@@ -1,10 +1,7 @@
 import type { Message } from "@grammyjs/types";
 import { shouldDebounceTextInbound } from "klawty/plugin-sdk/channel-runtime";
 import type { KlawtyConfig } from "klawty/plugin-sdk/config-runtime";
-import {
-  createInboundDebouncer,
-  resolveInboundDebounceMs,
-} from "klawty/plugin-sdk/reply-runtime";
+import { createInboundDebouncer, resolveInboundDebounceMs } from "klawty/plugin-sdk/reply-runtime";
 import { danger, logVerbose, warn } from "klawty/plugin-sdk/runtime-env";
 import {
   hasInboundMedia,

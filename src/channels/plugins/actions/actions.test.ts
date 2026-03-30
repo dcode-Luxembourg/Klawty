@@ -148,9 +148,7 @@ function createSignalAccountOverrideCfg(): KlawtyConfig {
   } as KlawtyConfig;
 }
 
-function createDiscordModerationOverrideCfg(params?: {
-  channelsEnabled?: boolean;
-}): KlawtyConfig {
+function createDiscordModerationOverrideCfg(params?: { channelsEnabled?: boolean }): KlawtyConfig {
   const accountActions = params?.channelsEnabled
     ? { moderation: true, channels: true }
     : { moderation: true };

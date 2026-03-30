@@ -159,9 +159,7 @@ export function collectPublishablePluginPackageErrors(
   const extensions = packageJson.klawty?.extensions ?? [];
 
   if (!packageName.startsWith("@klawty/")) {
-    errors.push(
-      `package name must start with "@klawty/"; found "${packageName || "<missing>"}".`,
-    );
+    errors.push(`package name must start with "@klawty/"; found "${packageName || "<missing>"}".`);
   }
   if (packageJson.private === true) {
     errors.push("package.json private must not be true.");

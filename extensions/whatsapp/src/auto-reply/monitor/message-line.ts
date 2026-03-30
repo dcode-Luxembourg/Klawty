@@ -1,9 +1,6 @@
 import { resolveMessagePrefix } from "klawty/plugin-sdk/agent-runtime";
 import type { loadConfig } from "klawty/plugin-sdk/config-runtime";
-import {
-  formatInboundEnvelope,
-  type EnvelopeFormatOptions,
-} from "klawty/plugin-sdk/reply-runtime";
+import { formatInboundEnvelope, type EnvelopeFormatOptions } from "klawty/plugin-sdk/reply-runtime";
 import type { WebInboundMsg } from "../types.js";
 
 export function formatReplyContext(msg: WebInboundMsg) {

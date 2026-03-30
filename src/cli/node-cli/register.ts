@@ -26,10 +26,7 @@ export function registerNodeCli(program: Command) {
       "after",
       () =>
         `\n${theme.heading("Examples:")}\n${formatHelpExamples([
-          [
-            "klawty node run --host 127.0.0.1 --port 2508",
-            "Run the node host in the foreground.",
-          ],
+          ["klawty node run --host 127.0.0.1 --port 2508", "Run the node host in the foreground."],
           ["klawty node status", "Check node host service status."],
           ["klawty node install", "Install the node host service."],
           ["klawty node restart", "Restart the installed node host service."],

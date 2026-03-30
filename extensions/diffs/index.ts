@@ -1,9 +1,5 @@
 import path from "node:path";
-import {
-  definePluginEntry,
-  resolvePreferredKlawtyTmpDir,
-  type KlawtyPluginApi,
-} from "./api.js";
+import { definePluginEntry, resolvePreferredKlawtyTmpDir, type KlawtyPluginApi } from "./api.js";
 import {
   diffsPluginConfigSchema,
   resolveDiffsPluginDefaults,

@@ -51,9 +51,7 @@ describe("shared/frontmatter", () => {
 
   test("resolveKlawtyManifestBlock returns undefined for invalid input", () => {
     expect(resolveKlawtyManifestBlock({ frontmatter: {} })).toBeUndefined();
-    expect(
-      resolveKlawtyManifestBlock({ frontmatter: { metadata: "not-json5" } }),
-    ).toBeUndefined();
+    expect(resolveKlawtyManifestBlock({ frontmatter: { metadata: "not-json5" } })).toBeUndefined();
     expect(resolveKlawtyManifestBlock({ frontmatter: { metadata: "123" } })).toBeUndefined();
     expect(resolveKlawtyManifestBlock({ frontmatter: { metadata: "[]" } })).toBeUndefined();
     expect(
@@ -78,10 +76,7 @@ describe("shared/frontmatter", () => {
       config: [],
     });
     expect(resolveKlawtyManifestRequires({})).toBeUndefined();
-    expect(resolveKlawtyManifestOs({ os: [" darwin ", "linux", ""] })).toEqual([
-      "darwin",
-      "linux",
-    ]);
+    expect(resolveKlawtyManifestOs({ os: [" darwin ", "linux", ""] })).toEqual(["darwin", "linux"]);
   });
 
   it("parses and applies install common fields", () => {
@@ -146,10 +141,7 @@ describe("shared/frontmatter", () => {
       kind: "npm",
     });
     expect(
-      applyKlawtyManifestInstallCommonFields(
-        { id: "keep", label: "Keep", bins: ["bun"] },
-        parsed!,
-      ),
+      applyKlawtyManifestInstallCommonFields({ id: "keep", label: "Keep", bins: ["bun"] }, parsed!),
     ).toEqual({
       id: "keep",
       label: "Keep",

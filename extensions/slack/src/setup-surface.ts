@@ -7,10 +7,7 @@ import {
   promptLegacyChannelAllowFromForAccount,
   type WizardPrompter,
 } from "klawty/plugin-sdk/setup";
-import type {
-  ChannelSetupWizard,
-  ChannelSetupWizardAllowFromEntry,
-} from "klawty/plugin-sdk/setup";
+import type { ChannelSetupWizard, ChannelSetupWizardAllowFromEntry } from "klawty/plugin-sdk/setup";
 import { formatDocsLink } from "klawty/plugin-sdk/setup-tools";
 import { resolveDefaultSlackAccountId, resolveSlackAccount } from "./accounts.js";
 import { resolveSlackChannelAllowlist } from "./resolve-channels.js";

@@ -589,10 +589,7 @@ function resolveDefaultStoreAgentId(cfg: KlawtyConfig): string {
   return normalizeAgentId(resolveDefaultAgentId(cfg));
 }
 
-export function resolveSessionStoreKey(params: {
-  cfg: KlawtyConfig;
-  sessionKey: string;
-}): string {
+export function resolveSessionStoreKey(params: { cfg: KlawtyConfig; sessionKey: string }): string {
   const raw = (params.sessionKey ?? "").trim();
   if (!raw) {
     return raw;

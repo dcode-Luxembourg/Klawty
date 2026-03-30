@@ -3,8 +3,7 @@ import type { TelegramNetworkConfig } from "klawty/plugin-sdk/config-runtime";
 import { isTruthyEnvValue } from "klawty/plugin-sdk/infra-runtime";
 import { isWSL2Sync } from "klawty/plugin-sdk/infra-runtime";
 
-export const TELEGRAM_DISABLE_AUTO_SELECT_FAMILY_ENV =
-  "KLAWTY_TELEGRAM_DISABLE_AUTO_SELECT_FAMILY";
+export const TELEGRAM_DISABLE_AUTO_SELECT_FAMILY_ENV = "KLAWTY_TELEGRAM_DISABLE_AUTO_SELECT_FAMILY";
 export const TELEGRAM_ENABLE_AUTO_SELECT_FAMILY_ENV = "KLAWTY_TELEGRAM_ENABLE_AUTO_SELECT_FAMILY";
 export const TELEGRAM_DNS_RESULT_ORDER_ENV = "KLAWTY_TELEGRAM_DNS_RESULT_ORDER";
 

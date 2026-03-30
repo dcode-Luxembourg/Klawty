@@ -1,7 +1,4 @@
-import type {
-  ModelDefinitionConfig,
-  ModelProviderConfig,
-} from "klawty/plugin-sdk/provider-models";
+import type { ModelDefinitionConfig, ModelProviderConfig } from "klawty/plugin-sdk/provider-models";
 
 export const QWEN_PORTAL_BASE_URL = "https://portal.qwen.ai/v1";
 const QWEN_PORTAL_DEFAULT_CONTEXT_WINDOW = 128000;

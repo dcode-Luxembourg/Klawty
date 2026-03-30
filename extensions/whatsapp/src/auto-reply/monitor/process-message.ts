@@ -11,10 +11,7 @@ import { resolveChunkMode, resolveTextChunkLimit } from "klawty/plugin-sdk/reply
 import { shouldComputeCommandAuthorized } from "klawty/plugin-sdk/reply-runtime";
 import { formatInboundEnvelope } from "klawty/plugin-sdk/reply-runtime";
 import type { getReplyFromConfig } from "klawty/plugin-sdk/reply-runtime";
-import {
-  buildHistoryContextFromEntries,
-  type HistoryEntry,
-} from "klawty/plugin-sdk/reply-runtime";
+import { buildHistoryContextFromEntries, type HistoryEntry } from "klawty/plugin-sdk/reply-runtime";
 import { finalizeInboundContext } from "klawty/plugin-sdk/reply-runtime";
 import { dispatchReplyWithBufferedBlockDispatcher } from "klawty/plugin-sdk/reply-runtime";
 import type { ReplyPayload } from "klawty/plugin-sdk/reply-runtime";

@@ -5,13 +5,7 @@ import { applyCliProfileEnv, parseCliProfileArgs } from "./profile.js";
 
 describe("parseCliProfileArgs", () => {
   it("leaves gateway --dev for subcommands", () => {
-    const res = parseCliProfileArgs([
-      "node",
-      "klawty",
-      "gateway",
-      "--dev",
-      "--allow-unconfigured",
-    ]);
+    const res = parseCliProfileArgs(["node", "klawty", "gateway", "--dev", "--allow-unconfigured"]);
     if (!res.ok) {
       throw new Error(res.error);
     }
@@ -94,9 +88,7 @@ describe("applyCliProfileEnv", () => {
 
     const resolvedHome = path.resolve("/srv/klawty-home");
     expect(env.KLAWTY_STATE_DIR).toBe(path.join(resolvedHome, ".klawty-work"));
-    expect(env.KLAWTY_CONFIG_PATH).toBe(
-      path.join(resolvedHome, ".klawty-work", "klawty.json"),
-    );
+    expect(env.KLAWTY_CONFIG_PATH).toBe(path.join(resolvedHome, ".klawty-work", "klawty.json"));
   });
 });
 
@@ -155,9 +147,7 @@ describe("formatCliCommand", () => {
   });
 
   it("handles command with no args after klawty", () => {
-    expect(formatCliCommand("klawty", { KLAWTY_PROFILE: "test" })).toBe(
-      "klawty --profile test",
-    );
+    expect(formatCliCommand("klawty", { KLAWTY_PROFILE: "test" })).toBe("klawty --profile test");
   });
 
   it("handles pnpm wrapper", () => {

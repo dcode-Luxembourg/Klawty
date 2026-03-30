@@ -65,8 +65,8 @@ marketplace source with `--marketplace`.
 
 These are published to npm and installed with `klawty plugins install`:
 
-| Plugin          | Package                | Docs                               |
-| --------------- | ---------------------- | ---------------------------------- |
+| Plugin          | Package              | Docs                               |
+| --------------- | -------------------- | ---------------------------------- |
 | Matrix          | `@klawty/matrix`     | [Matrix](/channels/matrix)         |
 | Microsoft Teams | `@klawty/msteams`    | [MS Teams](/channels/msteams)      |
 | Nostr           | `@klawty/nostr`      | [Nostr](/channels/nostr)           |

@@ -1,11 +1,7 @@
 import { createAccountStatusSink } from "klawty/plugin-sdk/channel-lifecycle";
 import { probeZalo } from "./probe.js";
 import { resolveZaloProxyFetch } from "./proxy.js";
-import {
-  PAIRING_APPROVED_MESSAGE,
-  type ChannelPlugin,
-  type KlawtyConfig,
-} from "./runtime-api.js";
+import { PAIRING_APPROVED_MESSAGE, type ChannelPlugin, type KlawtyConfig } from "./runtime-api.js";
 import { normalizeSecretInputString } from "./secret-input.js";
 import { sendMessageZalo } from "./send.js";
 

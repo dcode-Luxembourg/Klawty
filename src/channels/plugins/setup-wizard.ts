@@ -64,10 +64,7 @@ export type ChannelSetupWizardEnvShortcut = {
   prompt: string;
   preferredEnvVar?: string;
   isAvailable: (params: { cfg: KlawtyConfig; accountId: string }) => boolean;
-  apply: (params: {
-    cfg: KlawtyConfig;
-    accountId: string;
-  }) => KlawtyConfig | Promise<KlawtyConfig>;
+  apply: (params: { cfg: KlawtyConfig; accountId: string }) => KlawtyConfig | Promise<KlawtyConfig>;
 };
 
 export type ChannelSetupWizardCredential = {
@@ -81,10 +78,7 @@ export type ChannelSetupWizardCredential = {
   keepPrompt: string;
   inputPrompt: string;
   allowEnv?: (params: { cfg: KlawtyConfig; accountId: string }) => boolean;
-  inspect: (params: {
-    cfg: KlawtyConfig;
-    accountId: string;
-  }) => ChannelSetupWizardCredentialState;
+  inspect: (params: { cfg: KlawtyConfig; accountId: string }) => ChannelSetupWizardCredentialState;
   shouldPrompt?: (params: {
     cfg: KlawtyConfig;
     accountId: string;

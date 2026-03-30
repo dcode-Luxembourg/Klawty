@@ -53,9 +53,7 @@ function buildProviderMaps(cfg?: KlawtyConfig): {
   return { canonical, aliases };
 }
 
-export function listImageGenerationProviders(
-  cfg?: KlawtyConfig,
-): ImageGenerationProviderPlugin[] {
+export function listImageGenerationProviders(cfg?: KlawtyConfig): ImageGenerationProviderPlugin[] {
   return [...buildProviderMaps(cfg).canonical.values()];
 }
 

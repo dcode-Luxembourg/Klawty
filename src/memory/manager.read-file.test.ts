@@ -7,10 +7,7 @@ import { resetEmbeddingMocks } from "./embedding.test-mocks.js";
 import type { MemoryIndexManager } from "./index.js";
 import { getRequiredMemoryIndexManager } from "./test-manager-helpers.js";
 
-function createMemorySearchCfg(options: {
-  workspaceDir: string;
-  indexPath: string;
-}): KlawtyConfig {
+function createMemorySearchCfg(options: { workspaceDir: string; indexPath: string }): KlawtyConfig {
   return {
     agents: {
       defaults: {

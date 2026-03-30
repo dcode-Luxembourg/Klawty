@@ -1,7 +1,4 @@
-import type {
-  ModelDefinitionConfig,
-  ModelProviderConfig,
-} from "klawty/plugin-sdk/provider-models";
+import type { ModelDefinitionConfig, ModelProviderConfig } from "klawty/plugin-sdk/provider-models";
 
 const MINIMAX_PORTAL_BASE_URL = "https://api.minimax.io/anthropic";
 export const MINIMAX_DEFAULT_MODEL_ID = "MiniMax-M2.7";

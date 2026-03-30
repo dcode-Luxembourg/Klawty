@@ -74,9 +74,7 @@ describe("provider attribution", () => {
   });
 
   it("returns a hidden-spec OpenAI Codex attribution policy", () => {
-    expect(
-      resolveProviderAttributionPolicy("openai-codex", { KLAWTY_VERSION: "1.0.0" }),
-    ).toEqual({
+    expect(resolveProviderAttributionPolicy("openai-codex", { KLAWTY_VERSION: "1.0.0" })).toEqual({
       provider: "openai-codex",
       enabledByDefault: true,
       verification: "vendor-hidden-api-spec",

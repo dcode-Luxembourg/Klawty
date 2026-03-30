@@ -18,16 +18,16 @@ For OpenClaw upstream changes, see [OpenClaw CHANGELOG](./CHANGELOG.md).
 
 ### Security Modules (src/security/) — 2,758 lines
 
-| Module | Lines | Feature |
-|--------|-------|---------|
-| `policy-enforcer.js` | 493 | Reads `klawty-policy.yaml` at runtime. Enforces deny-by-default rules for network endpoints, filesystem paths, and shell commands before any tool execution |
-| `exec-sandbox.js` | 229 | Wraps the `exec` tool in Docker containers: `--network none`, read-only root, 512MB memory limit, 30s timeout. Falls back to native + policy checks without Docker |
-| `privacy-router.js` | 211 | Regex-based PII detection (email, phone, credit card, SSN, IBAN) + configurable keyword matching. Routes sensitive tasks to local models, redacts PII, or blocks execution |
-| `credential-monitor.js` | 448 | Validates OpenRouter, Discord, Telegram, Slack API keys against their endpoints every 6 hours. Alerts on expiry, revocation, or low balance (OpenRouter: $5 warn, $1 critical) |
-| `integrity-check.js` | 188 | Generates SHA-256 manifest of all runtime .js files. Verifies on every boot. Tampered critical files trigger read-only degradation |
-| `auto-update.js` | 470 | Checks for new versions via license API. Downloads update bundles, creates pre-update backup, verifies integrity post-update, rollback on failure |
-| `tui-dashboard.js` | 624 | Full-screen ANSI terminal dashboard: agent status table, task stats, health indicators, cost progress bar, activity log. Keyboard navigation. 5s auto-refresh |
-| `klawty-boot.js` | 95 | Boot hook that initializes all security modules when the gateway starts. Non-blocking — gateway runs even if modules fail |
+| Module                  | Lines | Feature                                                                                                                                                                        |
+| ----------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `policy-enforcer.js`    | 493   | Reads `klawty-policy.yaml` at runtime. Enforces deny-by-default rules for network endpoints, filesystem paths, and shell commands before any tool execution                    |
+| `exec-sandbox.js`       | 229   | Wraps the `exec` tool in Docker containers: `--network none`, read-only root, 512MB memory limit, 30s timeout. Falls back to native + policy checks without Docker             |
+| `privacy-router.js`     | 211   | Regex-based PII detection (email, phone, credit card, SSN, IBAN) + configurable keyword matching. Routes sensitive tasks to local models, redacts PII, or blocks execution     |
+| `credential-monitor.js` | 448   | Validates OpenRouter, Discord, Telegram, Slack API keys against their endpoints every 6 hours. Alerts on expiry, revocation, or low balance (OpenRouter: $5 warn, $1 critical) |
+| `integrity-check.js`    | 188   | Generates SHA-256 manifest of all runtime .js files. Verifies on every boot. Tampered critical files trigger read-only degradation                                             |
+| `auto-update.js`        | 470   | Checks for new versions via license API. Downloads update bundles, creates pre-update backup, verifies integrity post-update, rollback on failure                              |
+| `tui-dashboard.js`      | 624   | Full-screen ANSI terminal dashboard: agent status table, task stats, health indicators, cost progress bar, activity log. Keyboard navigation. 5s auto-refresh                  |
+| `klawty-boot.js`        | 95    | Boot hook that initializes all security modules when the gateway starts. Non-blocking — gateway runs even if modules fail                                                      |
 
 ### Security Policy
 

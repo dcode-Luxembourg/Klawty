@@ -1,9 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import {
-  DEFAULT_KLAWTY_BROWSER_COLOR,
-  DEFAULT_KLAWTY_BROWSER_PROFILE_NAME,
-} from "./constants.js";
+import { DEFAULT_KLAWTY_BROWSER_COLOR, DEFAULT_KLAWTY_BROWSER_PROFILE_NAME } from "./constants.js";
 
 function decoratedMarkerPath(userDataDir: string) {
   return path.join(userDataDir, ".klawty-profile-decorated");

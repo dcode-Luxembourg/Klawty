@@ -1,8 +1,5 @@
 import { DEFAULT_ACCOUNT_ID } from "klawty/plugin-sdk/account-id";
-import {
-  type ChannelSetupDmPolicy,
-  type ChannelSetupWizardAdapter,
-} from "klawty/plugin-sdk/setup";
+import { type ChannelSetupDmPolicy, type ChannelSetupWizardAdapter } from "klawty/plugin-sdk/setup";
 import { requiresExplicitMatrixDefaultAccount } from "./account-selection.js";
 import { listMatrixDirectoryGroupsLive } from "./directory-live.js";
 import {
