@@ -1,1 +1,1 @@
-export * from "../../src/plugin-sdk/nextcloud-talk.js";
+export * from "klawty/plugin-sdk/nextcloud-talk";

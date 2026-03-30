@@ -14,11 +14,11 @@ describe("shared/assistant-identity-values", () => {
   });
 
   it("truncates overlong trimmed values at the exact limit", () => {
-    expect(coerceIdentityValue("  Klawty Assistant  ", 8)).toBe("Klawty");
+    expect(coerceIdentityValue("  Klawty Assistant  ", 8)).toBe("Klawty A");
   });
 
   it("returns an empty string when truncating to a zero-length limit", () => {
     expect(coerceIdentityValue("  Klawty  ", 0)).toBe("");
-    expect(coerceIdentityValue("  Klawty  ", -1)).toBe("OpenCla");
+    expect(coerceIdentityValue("  Klawty  ", -1)).toBe("Klawt");
   });
 });
