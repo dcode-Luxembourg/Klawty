@@ -138,6 +138,10 @@ docs/superpowers
 # Deprecated changelog fragment workflow
 changelog/fragments/
 
+# Klawty — premium (never commit to public repo)
+runtime/premium/
+runtime/tools/vertical-tools/
+
 # Klawty
 workspace/.env
 workspace/.session
